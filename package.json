@@ -1,0 +1,43 @@
+{
+  "name": "ose-example-lirc",
+  "preferGlobal": true,
+  "version": "0.1.7",
+  "author": "Jan Snasel <snaselj@gmail.com>",
+  "description": "Open Smart Environment LIRC example",
+  "contributors": [
+    {
+      "name": "Jan Snasel",
+      "email": "snaselj@gmail.com"
+    },
+    {
+      "name": "Fred Rooks",
+      "email": "fred@fredrooks.com"
+    }
+  ],
+  "main": "./lib/node",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opensmartenvironment/ose-example-lirc.git"
+  },
+  "keywords": [
+    "open smart environment",
+    "home automation",
+    "media player",
+    "raspberry pi"
+  ],
+  "dependencies": {
+    "ose": "*",
+    "ose-control": "*",
+    "ose-lirc": "*",
+    "ose-media": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "marked": "*",
+    "yuidocjs": "^0.3.50"
+  },
+  "license": "GPL-3.0+",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
