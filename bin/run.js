@@ -25,7 +25,8 @@
  *
  * @description
  *
- * ## Installation
+ * @usage
+ * ## Usage
  *
  * For the LIRC example to work, you need the following:
  * - LIRC-supported hardware
