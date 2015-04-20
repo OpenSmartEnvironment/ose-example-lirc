@@ -67,18 +67,15 @@ See [Setting Up LIRC on the
 RaspberryPi](http://alexba.in/blog/2013/01/06/setting-up-lirc-on-the-raspberrypi/)
 
 
-To install the example application, do one of the following:
+To install the example application, do the following:
 
-    npm install ose-example-player
-
-or
-   
-    git clone https://github.com/OpenSmartEnvironment/ose-example-player
+    git clone https://github.com/OpenSmartEnvironment/ose-example-lirc
+    cd ose-example-lirc
+    npm install
 
 
 Start the LIRC example as follows:
 
-    cd ose-example-player
     ./bin/run.js
 
 ## Licence
