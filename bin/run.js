@@ -36,18 +36,15 @@
  * RaspberryPi](http://alexba.in/blog/2013/01/06/setting-up-lirc-on-the-raspberrypi/)
  *
  *
- * To install the example application, do one of the following:
+ * To install the example application, do the following:
  *
- *     npm install ose-example-player
- *
- * or
- *    
- *     git clone https://github.com/OpenSmartEnvironment/ose-example-player
+ *     git clone https://github.com/OpenSmartEnvironment/ose-example-lirc
+ *     cd ose-example-lirc
+ *     npm install
  *
  *
  * Start the LIRC example as follows:
  *
- *     cd ose-example-player
  *     ./bin/run.js
  *
  * @module example-lirc
@@ -89,7 +86,7 @@ exports.ose = {
 // Enable general control package
 exports['ose-control'] = {};
 
-// Enable general lirc player package
+// Enable general lirc package
 exports['ose-lirc'] = {};
 
 
@@ -116,14 +113,13 @@ exports.cli = {
 exports.space = {
   id: 'ose/lib/space',         // Module id
   name: 'example.org',         // Name of the space
-  home: 'media',               // Home instance of the space
+  home: 'player',              // Home instance of the space
 
   // Peers to connect to
   peers: {
-    // Media player OSE instance – When running the lirc and player
-    // OSE instances on different machines, change the following IP
+    // Media player OSE instance – Change the following IP
     // address to that of the media player instance.
-    media: 'ws://10.166.25.8:4431',
+    player: 'ws://10.166.25.8:4431',  // CHANGE ME !!!!!
   }
 };
 
