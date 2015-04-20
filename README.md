@@ -1,7 +1,26 @@
 # Open Smart Environment - LIRC example
-This package is a part of the OSE suite.
-All packages can be found [on GitHub](https://github.com/opensmartenvironment/).
+Extends the [media player example](http://opensmartenvironment.github.io/doc/#mediaplayerexample). Allows to control
+the media player with a IR remote controller via LIRC.
 
+In this example, the remote controller behaviour is configured as follows:
+- Volume up, down and mute
+- Play, pause, stop
+- Activate the audio command group by pressing "KEY_AUDIO" and
+  select a predefined stream by pressing some digit
+- Activate the DVB by pressing "KEY_TV" command group and select a
+  predefined DVB channel by pressing some digit
+- Switch to previous or next channel by pressing the "KEY_PREVIOUS"
+  and "KEY_NEXT" keys.
+
+You can configure the behaviour to suit your needs.
+
+## Important links
+This package is a part of the OSE suite. For more information, see the following links:
+- [LIRC example documentation](http://opensmartenvironment.github.io/doc/#example-lirc)
+- [OSE suite documentation](http://opensmartenvironment.github.io/doc/)
+- [All packages](https://github.com/opensmartenvironment/)
+
+## About OSE
 <b>Open Smart Environment software is a suite for creating
 multi-instance applications that work as a single whole.</b><br>
 Imagine, for example, a personal mesh running on various devices
@@ -38,23 +57,29 @@ OSE has the following prerequisites:
 - Node.js (>0.10) running on Debian Jessie and Raspbian
 - Firefox 37 or newer with Web Components enabled
 
-## Package description
-Extends the [media player example](http://opensmartenvironment.github.io/doc/#mediaplayerexample). Allows to control
-the media player with a IR remote controller via LIRC.
+## Usage
 
-In this example, the remote controller behaviour is configured as follows:
-- Volume up, down and mute
-- Play, pause, stop
-- Activate the audio command group by pressing "KEY_AUDIO" and
-  select a predefined stream by pressing some digit
-- Activate the DVB by pressing "KEY_TV" command group and select a
-  predefined DVB channel by pressing some digit
-- Switch to previous or next channel by pressing the "KEY_PREVIOUS"
-  and "KEY_NEXT" keys.
+For the LIRC example to work, you need the following:
+- LIRC-supported hardware
+- Configured and running LIRC daemon
 
-You can configure the behaviour to suit your needs.
+See [Setting Up LIRC on the
+RaspberryPi](http://alexba.in/blog/2013/01/06/setting-up-lirc-on-the-raspberrypi/)
 
-The documentation for "ose-example-lirc" package can be found **[here](http://opensmartenvironment.github.io/doc/#ose-example-lirc#)**.
+
+To install the example application, do one of the following:
+
+    npm install ose-example-player
+
+or
+   
+    git clone https://github.com/OpenSmartEnvironment/ose-example-player
+
+
+Start the LIRC example as follows:
+
+    cd ose-example-player
+    ./bin/run.js
 
 ## Licence
 This software is released under the terms of the [GNU General
