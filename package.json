@@ -31,11 +31,6 @@
     "ose-lirc": "*",
     "ose-media": "*"
   },
-  "devDependencies": {
-    "grunt": "*",
-    "marked": "*",
-    "yuidocjs": "^0.3.50"
-  },
   "license": "GPL-3.0+",
   "engines": {
     "node": ">=0.10"
