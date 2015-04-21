@@ -186,7 +186,7 @@ function initLirc(shard) {
 
   // Setup individual streams that will be played after some digit is
   // pressed on a remote controller
-  media.addSource(audio, {space: 'example.org', alias: 'media'}, require('./streams'));
+  media.addSource(audio, {space: 'example.org', alias: 'media'}, require('../data/streams'));
 
 
   // Create `dvb` command group activated by "KEY_TV" LIRC command
