@@ -25,10 +25,10 @@
     "raspberry pi"
   ],
   "dependencies": {
-    "ose": "*",
-    "ose-control": "*",
-    "ose-lirc": "*",
-    "ose-media": "*"
+    "ose": "git+https://github.com/OpenSmartEnvironment/ose.git",
+    "ose-control": "git+https://github.com/OpenSmartEnvironment/ose-control.git",
+    "ose-lirc": "git+https://github.com/OpenSmartEnvironment/ose-lirc.git",
+    "ose-media": "git+https://github.com/OpenSmartEnvironment/ose-media.git"
   },
   "license": "GPL-3.0+",
   "engines": {
