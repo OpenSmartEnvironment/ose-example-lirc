@@ -40,7 +40,7 @@
  *
  *     git clone https://github.com/OpenSmartEnvironment/ose-example-lirc
  *     cd ose-example-lirc
- *     ./bin/install.sh
+ *     npm install
  *
  *
  * Start the LIRC example as follows:
