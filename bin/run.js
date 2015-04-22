@@ -3,8 +3,8 @@
 /**
  * @caption LIRC example
  *
- * @readme
  *
+ * @readme
  * Extends the [media player example]. Allows to control
  * the media player with a IR remote controller via LIRC.
  *
@@ -20,10 +20,6 @@
  *
  * You can configure the behaviour to suit your needs.
  *
- *
- * @oseExample
- *
- * @description
  *
  * @usage
  * ## Usage
@@ -46,6 +42,7 @@
  * Start the LIRC example as follows:
  *
  *     ./bin/run.js
+ *
  *
  * @module example-lirc
  * @main example-lirc
