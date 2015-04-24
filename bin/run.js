@@ -38,6 +38,9 @@
  *     cd ose-example-lirc
  *     npm install
  *
+ * Configure the IP address and port number of the OSE Media player within your network in `bin/run.js`.
+ *
+ *     player: 'ws://[ip address]:[port]'
  *
  * Start the LIRC example as follows:
  *
