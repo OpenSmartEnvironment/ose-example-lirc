@@ -8,7 +8,7 @@
  * Extends the [media player example]. Allows to control
  * the media player with a IR remote controller via LIRC.
  *
- * In this example, the remote controller behaviour is configured as follows:
+ * @features
  * - Volume up, down and mute
  * - Play, pause, stop
  * - Activate the audio command group by pressing "KEY_AUDIO" and
@@ -17,8 +17,6 @@
  *   predefined DVB channel by pressing some digit
  * - Switch to previous or next channel by pressing the "KEY_PREVIOUS"
  *   and "KEY_NEXT" keys.
- *
- * You can configure the behaviour to suit your needs.
  *
  *
  * @usage
