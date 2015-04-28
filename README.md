@@ -2,7 +2,7 @@
 Extends the [media player example](http://opensmartenvironment.github.io/doc/#mediaplayerexample). Allows to control
 the media player with a IR remote controller via LIRC.
 
-In this example, the remote controller behaviour is configured as follows:
+## Features
 - Volume up, down and mute
 - Play, pause, stop
 - Activate the audio command group by pressing "KEY_AUDIO" and
@@ -11,8 +11,6 @@ In this example, the remote controller behaviour is configured as follows:
   predefined DVB channel by pressing some digit
 - Switch to previous or next channel by pressing the "KEY_PREVIOUS"
   and "KEY_NEXT" keys.
-
-You can configure the behaviour to suit your needs.
 
 ## Important links
 This package is a part of the OSE suite. For more information, see the following links:
