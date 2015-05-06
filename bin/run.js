@@ -38,13 +38,14 @@
  *
  * Configure the IP address and port number of the OSE Media player within your network in `bin/run.js`.
  *
- *     player: 'ws://[ip address]:[port]'
+ *     player: 'ws://IP_ADDRESS:PORT'
  *
  * Start the LIRC example as follows:
  *
  *     ./bin/run.js
  *
  *
+ * @scope control
  * @module example-lirc
  * @main example-lirc
  */

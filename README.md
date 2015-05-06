@@ -73,7 +73,7 @@ To install the example application, do the following:
 
 Configure the IP address and port number of the OSE Media player within your network in `bin/run.js`.
 
-    player: 'ws://[ip address](http://opensmartenvironment.github.io/doc/#ipaddress):[port](http://opensmartenvironment.github.io/doc/#port)'
+    player: 'ws://IP_ADDRESS:PORT'
 
 Start the LIRC example as follows:
 
