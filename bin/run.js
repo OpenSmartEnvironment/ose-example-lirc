@@ -148,15 +148,15 @@ function initLirc(shard) {
 
 
   // Relay LIRC commands to `Remote` component
-  entry.on('receive', function(data) {
-    Remote.receive(entry, data);
+  entry.on('receive', function(val) {
+    Remote.receive(entry, val);
   });
 
 
   // Create the `media` command group. This group has some predefined
   // LIRC commands, see "ose-media/lib/remote.js" or
   // http://opensmartenvironment.github.io/doc/modules/media.remote.html
-  var media = new Media(entry.data.player);
+  var media = new Media(entry.dval.player);
 
   // After this timeout switch to the last command group without the
   // timeout defined (tv or audio)
@@ -168,7 +168,7 @@ function initLirc(shard) {
 
   // Setup LIRC "KEY_POWER" command
   Remote.add(media, 'power', function() {
-    entry.postTo(entry.data.player, 'stop');
+    entry.postTo(entry.dval.player, 'stop');
   });
 
   // Setup LIRC "KEY_NEXT" and "KEY_PREVIOUS" commands
@@ -181,7 +181,7 @@ function initLirc(shard) {
   Remote.groupKey(entry, audio);
 
   // Setup target of commands
-  audio.target = entry.data.player;
+  audio.target = entry.dval.player;
 
   // Setup individual streams that will be played after some digit is
   // pressed on a remote controller
@@ -193,7 +193,7 @@ function initLirc(shard) {
   Remote.groupKey(entry, dvb);
 
   // Setup target of commands
-  dvb.target = entry.data.player;
+  dvb.target = entry.dval.player;
 
   // Setup individual DVB channels, that will be played after some
   // digit is pressed on a remote
