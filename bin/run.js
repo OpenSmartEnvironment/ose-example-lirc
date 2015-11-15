@@ -141,8 +141,8 @@ function initLirc(shard) {
   var entry = shard.entry('lirc', 'lirc', {
     name: 'LIRC',
     player: {  // Identification of media player entry
-      id: 'player',
-      alias: 'media',
+      entry: 'player',
+      shard: 'media',
     },
   });
 
@@ -168,7 +168,7 @@ function initLirc(shard) {
 
   // Setup LIRC "KEY_POWER" command
   Remote.add(media, 'power', function() {
-    entry.postTo(entry.dval.player, 'stop');
+    entry.shard.post(entry.dval.player, 'stop');
   });
 
   // Setup LIRC "KEY_NEXT" and "KEY_PREVIOUS" commands
@@ -185,7 +185,7 @@ function initLirc(shard) {
 
   // Setup individual streams that will be played after some digit is
   // pressed on a remote controller
-  media.addSource(audio, {space: 'example.org', alias: 'media'}, require('../data/streams'));
+  media.addSource(audio, {space: 'example.org', shard: 'media'}, require('../data/streams'));
 
 
   // Create `dvb` command group activated by "KEY_TV" LIRC command
