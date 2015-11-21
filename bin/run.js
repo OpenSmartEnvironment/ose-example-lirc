@@ -64,7 +64,9 @@
 'use strict';
 
 // The OSE framework is initialized by requiring the "ose" package:
-var O = require('ose').app(module, 'example');
+var O = require('ose').module(module);
+O.scope = 'control';
+O.package = 'ose-example-lirc';
 
 var Remote = require('ose-control/lib/remote');
 var Media = O.class('ose-media/lib/remote');
