@@ -81,6 +81,7 @@ var Media = O.class('ose-media/lib/remote');
 exports.ose = {
   name: 'lirc',          // Name of this OSE instance
   space: 'example.org',  // Space name this instance belongs to
+  spid: 4,
 };
 
 
@@ -138,15 +139,19 @@ exports.control = {
 
 // "lirc" shard initialization method.
 function initLirc(shard) {
+  var trans = shard.startTrans();
 
   // Create entry representing LIRC
-  var entry = shard.entry('lirc', 'lirc', {
+  var entry = trans.add('lirc', {
+    alias: 'lirc',
     name: 'LIRC',
     player: {  // Identification of media player entry
       entry: 'player',
       shard: 'media',
     },
   });
+
+  trans.commit(O.log.bindError());
 
 
   // Relay LIRC commands to `Remote` component
