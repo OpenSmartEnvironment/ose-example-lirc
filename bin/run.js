@@ -45,7 +45,6 @@
  *     ./bin/run.js
  *
  *
- * @scope control
  * @module example-lirc
  * @main example-lirc
  */
@@ -65,7 +64,6 @@
 
 // The OSE framework is initialized by requiring the "ose" package:
 var O = require('ose').module(module);
-O.scope = 'control';
 O.package = 'ose-example-lirc';
 
 var Remote = require('ose-control/lib/remote');
@@ -130,7 +128,7 @@ exports.space = {
 exports.control = {
   id: 'ose/lib/shard',
   sid: 5,                   // Shard id unique within the space
-  scope: 'control',         // Scope the shard belongs to
+  schema: 'control',        // Schema the shard belongs to
   alias: 'lirc',            // Shard alias
   home: 'lirc',             // Home instance of the space
   entries: initLirc,        // Method initializing entries belonging
