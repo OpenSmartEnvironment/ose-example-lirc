@@ -89,6 +89,9 @@ exports['ose-control'] = {};
 // Enable general lirc package
 exports['ose-lirc'] = {};
 
+// Enable media package
+exports['ose-media'] = {};
+
 
 // Enable CLI interface
 exports.cli = {
@@ -119,7 +122,7 @@ exports.space = {
   peers: {
     // Media player OSE instance – Change the following IP
     // address to that of the media player instance.
-    player: 'ws://10.166.25.8:4431',  // CHANGE ME !!!!!
+    player: 'ws://10.166.25.14:4431',  // CHANGE ME !!!!!
   }
 };
 
