@@ -140,7 +140,7 @@ exports.control = {
 
 // "lirc" shard initialization method.
 function initLirc(shard) {
-  var trans = shard.startTrans();
+  var trans = shard.transaction();
 
   // Create entry representing LIRC
   var entry = trans.add('lirc', {
