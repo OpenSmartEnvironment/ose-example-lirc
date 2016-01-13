@@ -134,16 +134,15 @@ exports.control = {
   schema: 'control',        // Schema the shard belongs to
   alias: 'lirc',            // Shard alias
   home: 'lirc',             // Home instance of the space
-  entries: initLirc,        // Method initializing entries belonging
-                            // to the shard, defined below
+  upgrades: [
+    initLirc,  // Method initializing entries belonging to the shard, defined below
+  ],
 };
 
 // "lirc" shard initialization method.
-function initLirc(shard) {
-  var trans = shard.transaction();
-
+function initLirc(transaction, cb) {
   // Create entry representing LIRC
-  var entry = trans.add('lirc', {
+  var entry = transaction.add('lirc', {
     alias: 'lirc',
     name: 'LIRC',
     player: {  // Identification of media player entry
@@ -151,9 +150,6 @@ function initLirc(shard) {
       shard: 'media',
     },
   });
-
-  trans.commit(O.log.bindError());
-
 
   // Relay LIRC commands to `Remote` component
   entry.on('receive', function(val) {
@@ -205,7 +201,10 @@ function initLirc(shard) {
 
   // Setup individual DVB channels, that will be played after some
   // digit is pressed on a remote
-// TODO  media.addSource(dvb, 'example.org', 'media', require('../media/dvb'));
+  // TODO  media.addSource(dvb, 'example.org', 'media', require('../media/dvb'));
+
+
+  return cb();
 }
 
 // Start OSE instance
