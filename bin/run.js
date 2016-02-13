@@ -36,13 +36,17 @@
  *     cd ose-example-lirc
  *     npm install
  *
- * Configure the IP address and port number of the OSE Media player within your network in `bin/run.js`.
+ *
+ * To configure this example, edit `ose-example-lirc/bin/run.js`.
+ * If you wish to use this example together with the [Media player example],
+ * configure its IP address and port number.
  *
  *     player: 'ws://IP_ADDRESS:PORT'
  *
+ *
  * Start the LIRC example as follows:
  *
- *     ./bin/run.js
+ *     ./ose-example-lirc/bin/run.js
  *
  *
  * @module example-lirc
@@ -70,11 +74,9 @@ const O = require('ose')(module)
 var Remote = require('ose-control/lib/remote');
 var Media = O.getClass('ose-media/lib/remote');
 
-/*!
- * OSE is configured by a configuration object, `module.exports` in
- * this case. Each property of this object defines the configuration
- * for one [OSE plugin].
- */
+// OSE is configured by a configuration object, `module.exports` in
+// this case. Each property of this object defines the configuration
+// for one OSE plugin.
 
 // Basic properties of OSE instance
 exports.ose = {
@@ -82,7 +84,6 @@ exports.ose = {
   space: 'example.org',  // Space name this instance belongs to
   spid: 4,
 };
-
 
 // Enable general control package
 exports['ose-control'] = {};
@@ -92,7 +93,6 @@ exports['ose-lirc'] = {};
 
 // Enable media package
 exports['ose-media'] = {};
-
 
 // Enable CLI interface
 exports.cli = {
