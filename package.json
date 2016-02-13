@@ -28,6 +28,7 @@
     "ose": "git+https://github.com/OpenSmartEnvironment/ose.git",
     "ose-control": "git+https://github.com/OpenSmartEnvironment/ose-control.git",
     "ose-lirc": "git+https://github.com/OpenSmartEnvironment/ose-lirc.git",
+    "ose-level": "git+https://github.com/OpenSmartEnvironment/ose-level.git",
     "ose-media": "git+https://github.com/OpenSmartEnvironment/ose-media.git"
   },
   "license": "GPL-3.0+",
